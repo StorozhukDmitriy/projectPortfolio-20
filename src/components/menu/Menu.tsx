@@ -1,26 +1,28 @@
 import { styled } from "styled-components";
 
-export const Menu = () => {
+type MenyPropsType = {
+  listItems: Array<string>;
+};
+
+export const Menu = (props: MenyPropsType) => {
   return (
     <HeaderMenu>
       <HeaderMenuItems>
-        <HeaderMenuItem>
-          <Link href="#">About</Link>
-        </HeaderMenuItem>
-        <HeaderMenuItem>
-          {" "}
-          <Link href="#">Projects</Link>
-        </HeaderMenuItem>
-        <HeaderMenuItem>
-          {" "}
-          <Link href="#">Contacts</Link>
-        </HeaderMenuItem>
+        {props.listItems.map((el) => {
+          return (
+            <HeaderMenuItem>
+              <Link href="#">{el}</Link>
+            </HeaderMenuItem>
+          );
+        })}
       </HeaderMenuItems>
     </HeaderMenu>
   );
 };
 
-const HeaderMenu = styled.nav``;
+const HeaderMenu = styled.nav`
+  padding: 14px 0;
+`;
 
 const HeaderMenuItems = styled.ul`
   display: flex;

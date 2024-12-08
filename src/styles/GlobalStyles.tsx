@@ -1,4 +1,6 @@
 import { createGlobalStyle } from "styled-components";
+import { Theme } from "./Theme";
+import { Font } from "./Font";
 
 export const GlobalStyles = createGlobalStyle`
     *,
@@ -12,12 +14,23 @@ export const GlobalStyles = createGlobalStyle`
     }
     body {
         
-        background-color: #f9faff;;
-        font-family:"Nunito", sans-serif;
+        background-color: ${Theme.color.primaryBg};
+        font-family:${Font.fontfamily};
         font-weight:400 ;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        margin: 0 auto;
+        color: ${Theme.color.font};
+    }
+    a{
+        text-decoration: none;
+        font-family: ${Font.secondfamily};
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px; 
+        color: ${Theme.color.font};
+    }
+    ul {
+        list-style: none;
     }
     section{
         margin: 144px auto;

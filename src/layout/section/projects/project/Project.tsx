@@ -23,7 +23,6 @@ const StyledProject = styled.div`
   border-radius: 24px;
   max-width: 992px;
   min-height: 524px;
-  outline: 2px solid red;
   margin-top: 80px;
   overflow: hidden;
 `;

@@ -10,7 +10,8 @@ export const Button = styled.button<ButtonPropsType>`
   padding: 8px 24px;
   height: 43px;
   line-height: 27px;
-  background-color: transparent;
-  border: 1px solid #25282b;
-  border-radius: 24px;
+  cursor: pointer;
+  background-color: ${(props) => props.color || "transparent"};
+  border: ${(props) => props.border || "1px solid #25282b"};
+  border-radius: ${(props) => props.radius || "24px"};
 `;
