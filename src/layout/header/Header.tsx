@@ -18,7 +18,13 @@ export const Header = () => {
   );
 };
 
-const StyledHeader = styled.header``;
+const StyledHeader = styled.header`
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  right: 0;
+  left: 0;
+`;
 
 // const HeaderWrapper = styled.div`
 //   max-width: 1200px;

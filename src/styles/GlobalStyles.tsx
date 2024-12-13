@@ -9,11 +9,8 @@ export const GlobalStyles = createGlobalStyle`
         padding: 0;
         margin: 0;
         box-sizing: border-box;
-
-        
     }
     body {
-        
         background-color: ${Theme.color.primaryBg};
         font-family:${Font.fontfamily};
         font-weight:400 ;
@@ -28,11 +25,14 @@ export const GlobalStyles = createGlobalStyle`
         font-size: 18px;
         line-height: 27px; 
         color: ${Theme.color.font};
+        cursor: pointer;
     }
     ul {
         list-style: none;
     }
     section{
+        max-width: 1440px;
+        width: 100%;
         margin: 144px auto;
         text-align: center;
 

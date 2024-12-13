@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { Theme } from "../../styles/Theme";
 
 type MenyPropsType = {
   listItems: Array<string>;
@@ -37,4 +38,21 @@ const HeaderMenuItem = styled.li`
 
 const Link = styled.a`
   text-decoration: none;
+  position: relative;
+  &:hover {
+    &::before {
+      background-color: ${Theme.color.font};
+      transition: 0.2s;
+    }
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+
+    bottom: -4px;
+  }
 `;

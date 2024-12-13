@@ -5,6 +5,7 @@ export const Theme = {
     accent: "#fdc435;",
     font: "#25282b",
     nameInMain: "#333",
-    textInMain: "#828282"
+    textInMain: "#828282",
+    borderInput: "#e8ecf4",
   },
 };
