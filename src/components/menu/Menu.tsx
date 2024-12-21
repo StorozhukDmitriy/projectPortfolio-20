@@ -23,6 +23,9 @@ export const Menu = (props: MenyPropsType) => {
 
 const HeaderMenu = styled.nav`
   padding: 14px 0;
+  @media ${Theme.media.tablet} {
+    display: none;
+  }
 `;
 
 const HeaderMenuItems = styled.ul`

@@ -3,6 +3,7 @@ import { Menu } from "../../components/menu/Menu";
 import { Font } from "../../styles/Font";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
+import { MobileMenu } from "../../components/mobileMenu/MobileMenu";
 const Item = ["About", "Projects", "Contacts"];
 
 export const Header = () => {
@@ -12,6 +13,7 @@ export const Header = () => {
         <FlexWrapper justify="space-between">
           <HeaderName>Vahid Navazan</HeaderName>
           <Menu listItems={Item} />
+          <MobileMenu listItems={Item} />
         </FlexWrapper>
       </Container>
     </StyledHeader>
@@ -26,14 +28,6 @@ const StyledHeader = styled.header`
   left: 0;
 `;
 
-// const HeaderWrapper = styled.div`
-//   max-width: 1200px;
-//   width: 100%;
-//   display: flex;
-//   justify-content: space-between;
-//   margin: 0 auto;
-//   padding: 12px 0;
-// `;
 
 const HeaderName = styled.a`
   font-family: ${Font.font4};

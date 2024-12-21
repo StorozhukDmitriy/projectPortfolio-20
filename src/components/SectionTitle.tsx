@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { Theme } from "../styles/Theme";
 
 export const SectionTitle = styled.h2`
   position: relative;

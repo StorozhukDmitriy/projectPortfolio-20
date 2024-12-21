@@ -41,6 +41,10 @@ const StyledProject = styled.div`
       transition: 0.3s;
     }
   }
+
+  @media ${Theme.media.tablet} {
+    margin-top: 50px;
+  }
 `;
 
 const StyledInfoProject = styled.div`

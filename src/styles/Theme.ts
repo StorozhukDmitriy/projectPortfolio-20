@@ -8,4 +8,8 @@ export const Theme = {
     textInMain: "#828282",
     borderInput: "#e8ecf4",
   },
+  media: {
+    tablet: "screen and (max-width: 768px)",
+    mobile: "screen and (max-width: 375px)",
+  },
 };

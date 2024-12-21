@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Skill } from "./skill/Skill";
+import { Theme } from "../../../styles/Theme";
 
 export const Skills = () => {
   return (
@@ -46,4 +47,6 @@ const StyledSkills = styled.section`
   max-width: 1200px;
   width: 100%;
   min-height: 519px;
+  @media ${Theme.media.tablet} {
+  }
 `;

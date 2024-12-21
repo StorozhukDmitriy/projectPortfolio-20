@@ -36,6 +36,10 @@ export const GlobalStyles = createGlobalStyle`
         margin: 144px auto;
         text-align: center;
 
+        @media ${Theme.media.tablet} {
+            margin: 80px auto;
+        }
+
     }
     h2 {
         font-family:"Playfair Display", sans-serif; 

@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import { Icon } from "../../../../components/icon/Icon";
 import { FlexWrapper } from "../../../../components/FlexWrapper";
+import { Theme } from "../../../../styles/Theme";
 
 type SkillPropsType = {
   img1: string;
@@ -76,6 +77,14 @@ export const Skill = (props: SkillPropsType) => {
 
 const StyledSkill = styled.div`
   width: 100%;
+  height: 100%;
   margin-top: 74px;
   padding: 10px 10px 10px;
+
+  @media ${Theme.media.tablet} {
+    padding: 0 20px;
+    svg:nth-child(n + 3) {
+      margin-top: 50px;
+    }
+  }
 `;
