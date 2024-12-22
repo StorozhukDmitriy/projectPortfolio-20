@@ -30,6 +30,7 @@ export const Project = (props: ProjectPropsType) => {
 const StyledProject = styled.div`
   border-radius: 24px;
   max-width: 992px;
+  width: 100%;
   min-height: 524px;
   margin-top: 80px;
   overflow: hidden;
@@ -45,15 +46,28 @@ const StyledProject = styled.div`
   @media ${Theme.media.tablet} {
     margin-top: 50px;
   }
+
+  @media screen and (max-width: 940px) {
+    ${FlexWrapper} {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+
+    max-width: 496px;
+  }
 `;
 
 const StyledInfoProject = styled.div`
-  width: 50%;
   padding: 146px 39px 146px 50px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-align: start;
+  @media ${Theme.media.tablet} {
+    padding: 131px 27px 131px 35px;
+    /* max-width: 100%; */
+  }
 `;
 
 const StyledProjectName = styled.h3`
@@ -75,11 +89,10 @@ const StyledTextInfoProject = styled.p`
 
 const PhotoWrapper = styled.div`
   object-fit: cover;
-  height: 524px;
-  width: 50%;
-  img {
-    top: 0;
-    right: 0;
-    bottom: 0;
+  max-width: 50%;
+  @media screen and (max-width: 940px) {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
   }
 `;

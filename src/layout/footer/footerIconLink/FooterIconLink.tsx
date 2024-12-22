@@ -29,4 +29,7 @@ const StyledFooterIconLink = styled.div`
   a + a {
     margin-left: 24px;
   }
+  @media ${Theme.media.tablet} {
+    margin-bottom: 80px;
+  }
 `;

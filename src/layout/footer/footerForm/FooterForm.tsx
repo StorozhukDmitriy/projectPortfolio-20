@@ -57,6 +57,11 @@ const StyledFooterForm = styled.form`
     resize: none;
     height: 160px;
   }
+
+  @media ${Theme.media.tablet} {
+    padding: 0 15px;
+    margin: 50px auto 56px;
+  }
 `;
 
 const StyledLabel = styled.label`

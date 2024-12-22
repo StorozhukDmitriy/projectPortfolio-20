@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import { Theme } from "./Theme";
 import { Font } from "./Font";
+import { FontStyles } from "./Common";
 
 export const GlobalStyles = createGlobalStyle`
     *,
@@ -18,13 +19,15 @@ export const GlobalStyles = createGlobalStyle`
         -moz-osx-font-smoothing: grayscale;
         color: ${Theme.color.font};
     }
-    a{
+    a {
+        ${FontStyles({
+          family: Font.secondfamily,
+          weight: 500,
+          color: Theme.color.font,
+          lineHeight: 1.5,
+        })}
         text-decoration: none;
-        font-family: ${Font.secondfamily};
-        font-weight: 500;
         font-size: 18px;
-        line-height: 27px; 
-        color: ${Theme.color.font};
         cursor: pointer;
     }
     ul {
@@ -42,16 +45,21 @@ export const GlobalStyles = createGlobalStyle`
 
     }
     h2 {
-        font-family:"Playfair Display", sans-serif; 
-        font-weight: 700;
+        ${FontStyles({
+          family: Font.thirdfamily,
+          weight: 700,
+          lineHeight: 1.5,
+        })}
         font-size: 48px;
-        line-height: 72px;
+        
     }
     button {
-        line-height: 27px;
-        font-family: "Roboto", sans-serif;
-        font-weight: 500;
-        font-size: 18px;
-        color: #25282b;
+        ${FontStyles({
+          family: Font.secondfamily,
+          weight: 500,
+          color: Theme.color.font,
+          lineHeight: 1.5,
+        })}
+        font-size: 18px; 
     }
 `;

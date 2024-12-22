@@ -81,7 +81,7 @@ const StyledSkill = styled.div`
   margin-top: 74px;
   padding: 10px 10px 10px;
 
-  @media ${Theme.media.tablet} {
+  @media screen and (max-width: 412px) {
     padding: 0 20px;
     svg:nth-child(n + 3) {
       margin-top: 50px;

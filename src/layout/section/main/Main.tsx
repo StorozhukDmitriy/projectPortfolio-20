@@ -62,6 +62,7 @@ const StyledMain = styled.div`
       flex-wrap: wrap-reverse;
       justify-content: flex-end;
       align-items: flex-start;
+      gap: 50px;
     }
   }
 `;
