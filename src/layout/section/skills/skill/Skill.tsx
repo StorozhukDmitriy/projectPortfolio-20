@@ -1,8 +1,7 @@
-import { styled } from "styled-components";
 import { Icon } from "../../../../components/icon/Icon";
 import { FlexWrapper } from "../../../../components/FlexWrapper";
-import { Theme } from "../../../../styles/Theme";
-
+import { S } from "./Skill_Styles";
+import React from "react";
 type SkillPropsType = {
   img1: string;
   img2: string;
@@ -30,9 +29,9 @@ type SkillPropsType = {
   viewbox6?: string;
 };
 
-export const Skill = (props: SkillPropsType) => {
+export const Skill: React.FC<SkillPropsType> = (props: SkillPropsType) => {
   return (
-    <StyledSkill>
+    <S.StyledSkill>
       <FlexWrapper justify="space-between" wrap="wrap">
         <Icon
           iconId={props.img1}
@@ -71,20 +70,6 @@ export const Skill = (props: SkillPropsType) => {
           height={props.height6}
         />
       </FlexWrapper>
-    </StyledSkill>
+    </S.StyledSkill>
   );
 };
-
-const StyledSkill = styled.div`
-  width: 100%;
-  height: 100%;
-  margin-top: 74px;
-  padding: 10px 10px 10px;
-
-  @media screen and (max-width: 412px) {
-    padding: 0 20px;
-    svg:nth-child(n + 3) {
-      margin-top: 50px;
-    }
-  }
-`;

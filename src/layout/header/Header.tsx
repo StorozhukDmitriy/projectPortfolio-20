@@ -1,38 +1,33 @@
-import styled from "styled-components";
-import { Menu } from "../../components/menu/Menu";
-import { Font } from "../../styles/Font";
+import { S } from "./Header_Styles";
+import { DesktopMenu } from "../../components/Menu/desktopMenu/DesktopMenu";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
-import { MobileMenu } from "../../components/mobileMenu/MobileMenu";
+import { MobileMenu } from "../../components/Menu/mobileMenu/MobileMenu";
+import React, { useState } from "react";
 const Item = ["About", "Projects", "Contacts"];
 
-export const Header = () => {
+export const Header: React.FC = () => {
+  const [width, setWidth] = useState(window.innerWidth);
+  const breakpoint = 768;
+
+  React.useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleWindowResize);
+    return () => window.removeEventListener("resize", handleWindowResize);
+  }, []);
+
   return (
-    <StyledHeader>
+    <S.StyledHeader>
       <Container>
         <FlexWrapper justify="space-between">
-          <HeaderName>Vahid Navazan</HeaderName>
-          <Menu listItems={Item} />
-          <MobileMenu listItems={Item} />
+          <S.StyledHeaderName>Vahid Navazan</S.StyledHeaderName>
+          {width < breakpoint ? (
+            <MobileMenu listItems={Item} />
+          ) : (
+            <DesktopMenu listItems={Item} />
+          )}
         </FlexWrapper>
       </Container>
-    </StyledHeader>
+    </S.StyledHeader>
   );
 };
-
-const StyledHeader = styled.header`
-  position: fixed;
-  z-index: 99999;
-  top: 0;
-  right: 0;
-  left: 0;
-`;
-
-
-const HeaderName = styled.a`
-  font-family: ${Font.font4};
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 32px;
-  padding: 12px 0;
-`;
