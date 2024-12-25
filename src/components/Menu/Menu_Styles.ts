@@ -1,10 +1,11 @@
 import { css, styled } from "styled-components";
 import { Theme } from "../../styles/Theme";
+import { Link } from "react-scroll";
 
 //Общие
 const HeaderMenuItem = styled.li``;
 
-const Link = styled.a`
+const NavLink = styled(Link)`
   text-decoration: none;
   position: relative;
   &:hover {
@@ -48,13 +49,15 @@ const MobilemenuWrapper = styled.div<{ isOpen: boolean }>`
   left: 0;
   bottom: 0;
   z-index: 99999999;
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: 0.5s;
   ${(props) =>
     props.isOpen &&
     css<{ isOpen: boolean }>`
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      transform: translateY(0);
       a {
         color: ${Theme.color.font};
         font-size: 46px;
@@ -99,7 +102,7 @@ const HeaderMenu = styled.nav`
 
 export const S = {
   HeaderMenuItem,
-  Link,
+  NavLink,
   StyledMobileMenu,
   MobilemenuWrapper,
   BurgerButton,

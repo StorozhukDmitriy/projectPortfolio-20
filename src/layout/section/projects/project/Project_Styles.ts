@@ -12,6 +12,8 @@ const StyledProject = styled.div`
   margin-top: 80px;
   overflow: hidden;
   box-shadow: 0 6px 64px 0 rgba(112, 144, 176, 0.1);
+  position: relative;
+  z-index: 1;
   ${Button} {
     &:hover {
       background-color: ${Theme.color.accent};

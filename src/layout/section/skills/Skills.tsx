@@ -35,9 +35,9 @@ const SkillData = [
   },
 ];
 
-export const Skills:React.FC = () => {
+export const Skills: React.FC = () => {
   return (
-    <S.StyledSkills>
+    <S.StyledSkills id="Skills">
       <FlexWrapper wrap="wrap" justify="center">
         <SectionTitle>Skills</SectionTitle>
         {SkillData.map((el) => {

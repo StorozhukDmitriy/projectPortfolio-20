@@ -1,17 +1,21 @@
 import { S } from "../Menu_Styles";
 import React from "react";
 
-type MenyPropsType = {
-  listItems: Array<string>;
-};
+const Item = [
+  { name: "About", href: "Skills" },
+  { name: "Projects", href: "Projects" },
+  { name: "Contacts", href: "Contacts" },
+];
 
-export const Menu: React.FC<MenyPropsType> = (props: MenyPropsType) => {
+export const Menu: React.FC = () => {
   return (
     <ul>
-      {props.listItems.map((el) => {
+      {Item.map((el) => {
         return (
           <S.HeaderMenuItem>
-            <S.Link href="#">{el}</S.Link>
+            <S.NavLink smooth={true} to={el.href}>
+              {el.name}
+            </S.NavLink>
           </S.HeaderMenuItem>
         );
       })}

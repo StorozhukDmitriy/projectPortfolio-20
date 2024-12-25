@@ -8,7 +8,7 @@ type LinkPropType = {
   viewBox?: string;
 };
 
-export const Link = (props: LinkPropType) => {
+export const NavLink = (props: LinkPropType) => {
   return (
     <StyledLink>
       <Icon

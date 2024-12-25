@@ -2,13 +2,9 @@ import burgerButton from "../../../assets/images/burgerButton.svg";
 import back from "../../../assets/images/cross.svg";
 import React, { useState } from "react";
 import { Menu } from "../menu/Menu";
-import {S} from "../Menu_Styles"
+import { S } from "../Menu_Styles";
 
-type MenyPropsType = {
-  listItems: Array<string>;
-};
-
-export const MobileMenu: React.FC<MenyPropsType> = (props: MenyPropsType) => {
+export const MobileMenu: React.FC = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const onBurgerBtnClick = () => {
     setMenuIsOpen(!menuIsOpen);
@@ -30,9 +26,8 @@ export const MobileMenu: React.FC<MenyPropsType> = (props: MenyPropsType) => {
           setMenuIsOpen(false);
         }}
       >
-        <Menu listItems={props.listItems} />
+        <Menu />
       </S.MobilemenuWrapper>
     </S.StyledMobileMenu>
   );
 };
-

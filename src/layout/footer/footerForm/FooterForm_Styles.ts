@@ -9,6 +9,8 @@ const StyledFooterForm = styled.form`
   min-height: 445px;
   margin: 90px auto 56px;
   text-align: end;
+  position: relative;
+  z-index: 1;
   ${FlexWrapper} {
     button {
       align-self: flex-end;

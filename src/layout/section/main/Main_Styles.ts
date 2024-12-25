@@ -59,6 +59,9 @@ const MainTitle = styled.h1`
   margin-bottom: 12px;
   font-size: 20px;
   text-transform: uppercase;
+  p {
+    display: none;
+  }
 `;
 const MainName = styled.span`
   font-size: 64px;

@@ -26,7 +26,7 @@ const projectData = [
 
 export const Projects: React.FC = () => {
   return (
-    <S.StyledProjects>
+    <S.StyledProjects id="Projects">
       <SectionTitle>Projects</SectionTitle>
       {projectData.map((el) => {
         return (

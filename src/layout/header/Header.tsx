@@ -4,7 +4,6 @@ import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { MobileMenu } from "../../components/Menu/mobileMenu/MobileMenu";
 import React, { useState } from "react";
-const Item = ["About", "Projects", "Contacts"];
 
 export const Header: React.FC = () => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -20,12 +19,8 @@ export const Header: React.FC = () => {
     <S.StyledHeader>
       <Container>
         <FlexWrapper justify="space-between">
-          <S.StyledHeaderName>Vahid Navazan</S.StyledHeaderName>
-          {width < breakpoint ? (
-            <MobileMenu listItems={Item} />
-          ) : (
-            <DesktopMenu listItems={Item} />
-          )}
+          <S.StyledHeaderName href="#start">Vahid Navazan</S.StyledHeaderName>
+          {width < breakpoint ? <MobileMenu /> : <DesktopMenu />}
         </FlexWrapper>
       </Container>
     </S.StyledHeader>

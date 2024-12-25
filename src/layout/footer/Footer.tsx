@@ -5,7 +5,7 @@ import footerImage from "../../assets/sprite/spriteImgFooter/Vector.svg";
 import { S } from "./Footer_Styles";
 export const Footer = () => {
   return (
-    <S.StyledFooter>
+    <S.StyledFooter id="Contacts">
       <SectionTitle>Contact me</SectionTitle>
       <FooterForm />
       <FooterIconLink />

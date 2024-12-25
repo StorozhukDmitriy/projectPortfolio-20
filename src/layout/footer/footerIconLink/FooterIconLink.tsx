@@ -1,4 +1,4 @@
-import { Link } from "../../../components/link/Link";
+import { NavLink } from "../../../components/link/Link";
 import { S } from "./FooterIconLink_Styles";
 
 const linkData = [
@@ -12,7 +12,7 @@ export const FooterIconLink = () => {
     <S.StyledFooterIconLink>
       {linkData.map((el) => {
         return (
-          <Link
+          <NavLink
             iconId={el.iconId}
             width={el.width}
             height={el.height}

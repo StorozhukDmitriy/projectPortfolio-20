@@ -1,3 +1,4 @@
+import Typewriter from "typewriter-effect";
 import bgImg from "../../../assets/images/Big.png";
 import smImg from "../../../assets/images/Small.png";
 import { FlexWrapper } from "../../../components/FlexWrapper";
@@ -8,11 +9,21 @@ import React from "react";
 
 export const Main: React.FC = () => {
   return (
-    <S.StyledMain>
+    <S.StyledMain id="start">
       <S.StyledMainContainer>
         <FlexWrapper align="center" justify="space-between" gap="92px">
           <S.MainTextBlock>
-            <S.MainTitle>Software Developer</S.MainTitle>
+            <S.MainTitle>
+              <p>"Software Developer"</p>
+              <Typewriter
+                options={{
+                  strings: "Software Developer",
+                  autoStart: true,
+                  loop: false,
+                  delay: 60,
+                }}
+              />
+            </S.MainTitle>
             <S.MainName>Hello,&nbsp;&nbsp;my name is Vahid Navazan</S.MainName>
             <S.MainText>
               Short text with details about you, what you do or your
