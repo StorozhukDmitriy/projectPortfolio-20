@@ -9,7 +9,7 @@ export const Footer = () => {
       <SectionTitle>Contact me</SectionTitle>
       <FooterForm />
       <FooterIconLink />
-      <S.FooterImage src={footerImage} />
+        <S.FooterImage src={footerImage} />
     </S.StyledFooter>
   );
 };

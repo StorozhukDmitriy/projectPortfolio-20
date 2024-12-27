@@ -43,7 +43,7 @@ const StyledMobileMenu = styled.nav`
 
 const MobilemenuWrapper = styled.div<{ isOpen: boolean }>`
   position: fixed;
-  background-color: ${Theme.color.accent};
+  background-color: rgba(253, 196, 53, 0.91);
   top: 0;
   right: 0;
   left: 0;

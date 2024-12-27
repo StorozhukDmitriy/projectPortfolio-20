@@ -2,8 +2,9 @@ import { S } from "../Menu_Styles";
 import React from "react";
 
 const Item = [
-  { name: "About", href: "Skills" },
+  { name: "Skills", href: "Skills" },
   { name: "Projects", href: "Projects" },
+  {name: "Testimony", href: "Testimony"},
   { name: "Contacts", href: "Contacts" },
 ];
 

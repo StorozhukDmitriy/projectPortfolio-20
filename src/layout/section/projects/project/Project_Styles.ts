@@ -43,9 +43,9 @@ const StyledInfoProject = styled.div`
   flex-direction: column;
   align-items: flex-start;
   text-align: start;
+  background-color: ${Theme.color.primaryBg};
   @media ${Theme.media.tablet} {
     padding: 131px 27px 131px 35px;
-    /* max-width: 100%; */
   }
 `;
 
@@ -69,8 +69,12 @@ const StyledTextInfoProject = styled.p`
 const PhotoWrapper = styled.div`
   object-fit: cover;
   max-width: 50%;
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
   @media screen and (max-width: 940px) {
-    width: fit-content;
+    /* width: fit-content; */
     display: flex;
     justify-content: center;
   }

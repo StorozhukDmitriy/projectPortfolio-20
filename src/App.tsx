@@ -5,15 +5,17 @@ import { Skills } from "./layout/section/skills/Skills";
 import { Projects } from "./layout/section/projects/Projects";
 import { Footer } from "./layout/footer/Footer";
 import { Particle } from "./components/particle/Particle";
+import { Testimonials } from "./layout/section/testimonies/Testimonials";
 
 function App() {
   return (
     <div className="App">
-      <Particle/>
+      <Particle />
       <Header />
       <Main />
       <Skills />
       <Projects />
+      <Testimonials/>
       <Footer />
     </div>
   );

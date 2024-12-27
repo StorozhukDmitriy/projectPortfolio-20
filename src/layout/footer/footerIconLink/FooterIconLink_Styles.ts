@@ -6,6 +6,9 @@ const StyledFooterIconLink = styled.div`
   width: 192px;
   height: 102px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 240px;
   span {
     display: inline-block;
     margin-top: 32px;
@@ -16,12 +19,21 @@ const StyledFooterIconLink = styled.div`
   }
   a + a {
     margin-left: 24px;
+    color: #25282b;
   }
+  svg {
+    transition: 0.3s;
+  }
+  svg:hover {
+    transform: translateY(-4px);
+    color: ${Theme.color.accent};
+  }
+
   @media ${Theme.media.tablet} {
-    margin-bottom: 80px;
+    margin-bottom: 177px;
   }
 `;
 
-export const S = { 
-    StyledFooterIconLink
-}
+export const S = {
+  StyledFooterIconLink,
+};

@@ -1,13 +1,14 @@
 import { styled } from "styled-components";
 
 const StyledFooter = styled.footer`
-  min-height: 1000px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 `;
 
 const FooterImage = styled.img`
-  left: 0;
-  right: 0;
+  position: absolute;
   bottom: 0;
 `;
 
