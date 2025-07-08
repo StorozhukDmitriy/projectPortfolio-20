@@ -64,7 +64,7 @@ const MainTitle = styled.h1`
   }
 `;
 const MainName = styled.span`
-  font-size: 64px;
+  font-size: 44px;
   ${FontStyles({
     family: Font.secondfamily,
     weight: 700,

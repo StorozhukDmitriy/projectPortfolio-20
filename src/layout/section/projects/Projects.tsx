@@ -10,7 +10,8 @@ const projectData = [
   {
     flexDirection: "row",
     photo: photo,
-    text: "I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.",
+    text: "Приложение для контроля задач и ведения списка дел.",
+    src:"https://storozhukdmitriy.github.io/toDoList/#/login"
   },
   {
     flexDirection: "row-reverse",
@@ -34,6 +35,7 @@ export const Projects: React.FC = () => {
             flexDirection={el.flexDirection}
             photo={el.photo}
             text={el.text}
+            src={el.src}
           />
         );
       })}

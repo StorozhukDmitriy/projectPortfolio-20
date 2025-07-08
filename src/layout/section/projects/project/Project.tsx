@@ -6,16 +6,18 @@ type ProjectPropsType = {
   flexDirection: string;
   photo: string;
   text: string;
+  src?: string;
 };
 
 export const Project = (props: ProjectPropsType) => {
+  debugger
   return (
     <S.StyledProject>
       <FlexWrapper direction={props.flexDirection}>
         <S.StyledInfoProject>
-          <S.StyledProjectName>Project Name</S.StyledProjectName>
+          <S.StyledProjectName>Tasks Tracker</S.StyledProjectName>
           <S.StyledTextInfoProject>{props.text}</S.StyledTextInfoProject>
-          <Button>View Project</Button>
+          <Button><a href={props.src}>View Project</a></Button>
         </S.StyledInfoProject>
         <S.PhotoWrapper>
           <img src={props.photo} alt="" />

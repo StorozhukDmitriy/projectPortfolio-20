@@ -19,7 +19,7 @@ export const Header: React.FC = () => {
     <S.StyledHeader>
       <Container>
         <FlexWrapper justify="space-between">
-          <S.StyledHeaderName href="#start">Vahid Navazan</S.StyledHeaderName>
+          <S.StyledHeaderName href="#start">Dmitrii Storozhuk</S.StyledHeaderName>
           {width < breakpoint ? <MobileMenu /> : <DesktopMenu />}
         </FlexWrapper>
       </Container>

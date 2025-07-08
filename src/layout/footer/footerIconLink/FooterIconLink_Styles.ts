@@ -4,11 +4,8 @@ import { Theme } from "../../../styles/Theme";
 
 const StyledFooterIconLink = styled.div`
   width: 192px;
-  height: 102px;
   margin: 0 auto;
-  position: relative;
   z-index: 2;
-  margin-bottom: 240px;
   span {
     display: inline-block;
     margin-top: 32px;
