@@ -7,7 +7,6 @@ import { FontStyles } from "../../../styles/Common";
 const StyledMain = styled.div`
   max-width: 1440px;
   width: 100%;
-  min-height: 100vh;
   margin: 0 auto;
   display: flex;
   justify-content: flex-end;
