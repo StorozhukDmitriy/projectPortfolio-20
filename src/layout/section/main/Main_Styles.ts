@@ -7,48 +7,60 @@ import { FontStyles } from "../../../styles/Common";
 const StyledMain = styled.div`
   max-width: 1440px;
   width: 100%;
-  min-height: 630px;
+  min-height: 100vh;
   margin: 0 auto;
   display: flex;
   justify-content: flex-end;
+  padding-top: 200px;
   @media screen and (max-width: 1345px) {
-    padding: 0 15px;
+    padding: 200px 15px 0;
   }
-  @media screen and (max-width: 1025px) {
+  @media screen and (max-width: 900px) {
+    padding-top: 100px;
     ${FlexWrapper} {
       flex-wrap: wrap-reverse;
-      justify-content: flex-end;
       align-items: flex-start;
-      gap: 50px;
+      justify-content: flex-start;
     }
+    div{
+      margin: 0 auto 30px;
+      justify-content: center;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    padding-top: 30px;
   }
 `;
 
 const StyledMainContainer = styled.div`
-  max-width: 1320px;
+  margin: 0 auto;
+  max-width: 1200px;
   width: 100%;
   min-height: 100%;
 `;
 
 const MainTextBlock = styled.div`
-  max-width: 508px;
-  width: 100%;
-  min-height: 408px;
-  text-align: start;
-  position: relative;
-  z-index: 10;
-  button + button {
-    margin-left: 12px;
-  }
+    max-width: 508px;
+    width: 100%;
+    min-height: 408px;
+    text-align: start;
+    position: relative;
+    z-index: 10;
+  
+    button:hover {
+        background-color: ${Theme.color.accent};
+        border: 2px solid transparent;
+        transition: 0.3s;
+    }
 
-  button:hover {
-    background-color: ${Theme.color.accent};
-    border: 2px solid transparent;
-    transition: 0.3s;
-  }
-  @media screen and (max-width: 1025px) {
-    margin: 0 auto;
-  }
+    @media screen and (max-width: 425px) {
+        display: flex;
+        flex-direction: column;
+      button{
+        margin: 10px 0 10px 0;
+      }
+    }
+
 `;
 const MainTitle = styled.h1`
   ${FontStyles({
@@ -85,24 +97,18 @@ const MainText = styled.p`
   color: ${Theme.color.textInMain};
 `;
 
-const MainImageВlock = styled.div`
+const MainImageBlock = styled.div`
   max-width: 720px;
   width: 100%;
-  min-height: 629px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 
   img {
-    position: absolute;
+    max-width: 300px;
     top: 0;
     right: 0;
-    @media screen and (max-width: 1345px) {
-      right: -15px;
-    }
-  }
-
-  @media ${Theme.media.tablet} {
-    max-width: 375px;
-    min-height: 413px;
   }
 `;
 
@@ -113,5 +119,5 @@ export const S = {
   MainTitle,
   MainName,
   MainText,
-  MainImageВlock,
+  MainImageBlock,
 };

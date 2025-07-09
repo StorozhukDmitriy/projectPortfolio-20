@@ -4,10 +4,20 @@ import {Theme} from '../../../../styles/Theme';
 const StyledSkill = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
-  height: 131px;
+  min-height: 131px;
   margin-top: 74px;
   padding: 10px 10px 10px;
+  
+  svg {
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  svg:hover {
+    transform: scale(1.2);
+  }
+  
   @media ${Theme.media.tablet} {
     margin-top:50px ;
   }

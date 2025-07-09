@@ -12,7 +12,7 @@ const StyledFooterIconLink = styled.div`
     font-family: ${Font.fontfamily};
     font-weight: 400;
     font-size: 16px;
-    color: ${Theme.color.textInMain};
+    color: ${Theme.color.secondaryBg};
   }
   a + a {
     margin-left: 24px;

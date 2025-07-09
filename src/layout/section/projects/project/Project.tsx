@@ -7,6 +7,7 @@ type ProjectPropsType = {
   photo: string;
   text: string;
   src?: string;
+  title?: string;
 };
 
 export const Project = (props: ProjectPropsType) => {
@@ -15,9 +16,9 @@ export const Project = (props: ProjectPropsType) => {
     <S.StyledProject>
       <FlexWrapper direction={props.flexDirection}>
         <S.StyledInfoProject>
-          <S.StyledProjectName>Tasks Tracker</S.StyledProjectName>
+          <S.StyledProjectName>{props.title}</S.StyledProjectName>
           <S.StyledTextInfoProject>{props.text}</S.StyledTextInfoProject>
-          <Button><a href={props.src}>View Project</a></Button>
+          <Button><a href={props.src} target={"_blank"}>View Project</a></Button>
         </S.StyledInfoProject>
         <S.PhotoWrapper>
           <img src={props.photo} alt="" />

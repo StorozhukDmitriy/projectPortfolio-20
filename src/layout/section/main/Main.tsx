@@ -1,23 +1,24 @@
 import Typewriter from 'typewriter-effect';
-import bgImg from '../../../assets/images/Big.png';
+import bgImg from '../../../assets/images/myPhoto.png';
 import smImg from '../../../assets/images/Small.png';
 import {FlexWrapper} from '../../../components/FlexWrapper';
 import {Button} from '../../../components/Button';
 import {Theme} from '../../../styles/Theme';
 import {S} from './Main_Styles';
 import React from 'react';
+import {styled} from 'styled-components';
 
 export const Main: React.FC = () => {
     return (
         <S.StyledMain id="start">
             <S.StyledMainContainer>
-                <FlexWrapper align="center" justify="space-between" gap="92px">
+                <FlexWrapper align="center" justify="space-between" >
                     <S.MainTextBlock>
                         <S.MainTitle>
-                            <p>"Software Developer"</p>
+                            <p>"Front-end Developer"</p>
                             <Typewriter
                                 options={{
-                                    strings: 'Software Developer',
+                                    strings: 'Front-end Developer',
                                     autoStart: true,
                                     loop: false,
                                     delay: 60,
@@ -28,36 +29,41 @@ export const Main: React.FC = () => {
                         <S.MainText>
                             Я Front-end разработчик, тут ты можешь ознакомится с моим проектами.
                         </S.MainText>
-                        <Button
-                            radius="8px"
-                            border="2px solid #25282b"
-                            color={Theme.color.primaryBg}
-                        >
-                            <a href="#Projects">Projects</a>
-                        </Button>
-                        <Button
-                            radius="8px"
-                            border="2px solid #25282b"
-                            color={Theme.color.primaryBg}
-                        >
-                            <a href="https://github.com/StorozhukDmitriy" target={"_blank"}>GitHub</a>
-                        </Button>
-                        <Button
-                            radius="8px"
-                            border="2px solid #25282b"
-                            color={Theme.color.primaryBg}
-                        >
-                            <a href="https://t.me/DmitriiStorozhuk" target={"_blank"}>Telegram</a>
-                        </Button>
+                        <ButtonWrapper>
+                            <Button
+                                radius="8px"
+                                border="2px solid #25282b"
+                                color={Theme.color.primaryBg}
+                            >
+                                <a href="#Projects">Projects</a>
+                            </Button>
+                            <Button
+                                radius="8px"
+                                border="2px solid #25282b"
+                                color={Theme.color.primaryBg}
+                            >
+                                <a href="https://github.com/StorozhukDmitriy" target={"_blank"}>GitHub</a>
+                            </Button>
+                            <Button
+                                radius="8px"
+                                border="2px solid #25282b"
+                                color={Theme.color.primaryBg}
+                            >
+                                <a href="https://t.me/DmitriiStorozhuk" target={"_blank"}>Telegram</a>
+                            </Button>
+                        </ButtonWrapper>
                     </S.MainTextBlock>
-                    <S.MainImageВlock>
-                        <picture>
-                            <source srcSet={smImg} media="(max-width: 768px)"/>
+                    <S.MainImageBlock>
                             <img src={bgImg} alt=""/>
-                        </picture>
-                    </S.MainImageВlock>
+                    </S.MainImageBlock>
                 </FlexWrapper>
             </S.StyledMainContainer>
         </S.StyledMain>
     );
 };
+
+const ButtonWrapper = styled.div`
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+`
